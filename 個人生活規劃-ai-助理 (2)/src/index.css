@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+:root {
+  /* 50YY 77/173 warm cream paper tone as primary background */
+  --bg-primary: #F7F5EE;
+  --bg-secondary: #EFECE2;
+  --surface: #FCFAF6;
+  --surface-soft: #F2EFE7;
+  --surface-rose: #EADCD9;
+  --border-soft: #E5DFD5;
+  --text-primary: #2B2826;
+  --text-secondary: #685F5B;
+  --text-muted: #9E938D;
+  
+  /* C09D9B specified muted dusty warm rose */
+  --accent-rose: #C09D9B;
+  --accent-warm: #E2BFA4;
+  --accent-cool: #8FA59F;
+  --accent-lilac: #9E94A8;
+  --accent-yellow: #E8DEBE;
+
+  /* Global Radius System */
+  --radius-xs: 10px;
+  --radius-sm: 14px;
+  --radius-md: 18px;
+  --radius-lg: 24px;
+  --radius-xl: 30px;
+  --radius-pill: 9999px;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Noto Serif TC', 'Cormorant Garamond', Georgia, serif;
+  }
+  .font-reading {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+  .font-utility {
+    font-family: 'Space Grotesk', ui-monospace, SFMono-Regular, monospace;
+  }
+
+  /* Bubble shape variants */
+  .bubble-soft {
+    border-radius: 26px;
+  }
+  .bubble-round {
+    border-radius: 36px;
+  }
+  .bubble-pill {
+    border-radius: 9999px;
+  }
+  .bubble-organic-1 {
+    border-radius: 34px 44px 32px 42px;
+  }
+  .bubble-organic-2 {
+    border-radius: 42px 30px 44px 34px;
+  }
+  .bubble-organic-3 {
+    border-radius: 30px 42px 36px 46px;
+  }
+  .bubble-organic-4 {
+    border-radius: 46px 36px 42px 30px;
+  }
+
+  /* Life bubble interaction */
+  .life-bubble {
+    position: relative;
+    overflow: hidden;
+    transition: transform 220ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 220ms ease, background-color 200ms ease;
+  }
+  .life-bubble:hover {
+    transform: translateY(-2px) scale(1.01);
+  }
+  .life-bubble:active {
+    transform: scale(0.985);
+  }
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #DDD7CB;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C4BCAC;
+}
+

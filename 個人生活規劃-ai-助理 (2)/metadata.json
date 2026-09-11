@@ -1,0 +1,8 @@
+{
+  "name": "個人生活規劃 AI 助理",
+  "description": "以生活品質與心理節奏為核心的溫柔數位手帳生活規劃系統，具備多層級記憶、智慧推薦、留白時間分析與生活回顧功能。",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
